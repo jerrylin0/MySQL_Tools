@@ -222,6 +222,7 @@ begin
 				) y
 				 on x.index_name = y.index_name and x.column_name = y.column_name
 				where y.index_name is null
+				 and and y.table_schema = '",db_name ,"'
 				group by x.index_name
 				) z") ;
 
